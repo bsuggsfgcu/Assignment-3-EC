@@ -4,6 +4,7 @@
 // Log: Oct 29 2024: files created, Level One complete, comments added, Level Two complete, comments added
 
 #include <iostream>
+#include <cmath>
 std::string LevelOne(int input);
 std::string LevelTwo(int input);
 std::string LevelThree(double input);
