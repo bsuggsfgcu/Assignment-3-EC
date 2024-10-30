@@ -6,41 +6,43 @@
 #include <iostream>
 std::string LevelOne(int input);
 std::string LevelTwo(int input);
-std::string LevelThree(int input);
+std::string LevelThree(double input);
 
 int main() {
-    int input1;
-    bool L1InputInvalid = true; // Input validation variable
-    std::cout << "LEVEL ONE\n";
-    while (L1InputInvalid)
-    {
-        // Input validation
-        std::cout << "Enter a number:\n";
-        std::cin >> input1;
-        if (input1 < 255 && input1 > 0)
-           L1InputInvalid = false;
-        else
-            std::cout << "Only numbers between 0 and 255 are allowed!\nPlease try again... \n";
-    }
-    std::cout << input1 << " is " << LevelOne(input1) << " in binary!'\n";
+//    int input1;
+//    bool L1InputInvalid = true; // Input validation variable
+//    std::cout << "LEVEL ONE\n";
+//    while (L1InputInvalid)
+//    {
+//        // Input validation
+//        std::cout << "Enter a number:\n";
+//        std::cin >> input1;
+//        if (input1 < 255 && input1 > 0)
+//           L1InputInvalid = false;
+//        else
+//            std::cout << "Only numbers between 0 and 255 are allowed!\nPlease try again... \n";
+//    }
+//    std::cout << input1 << " is " << LevelOne(input1) << " in binary!'\n";
+//
+//    int input2;
+//    bool L2InputInvalid = true; // Input validation variable
+//    std::cout << "LEVEL TWO\n";
+//    while (L2InputInvalid)
+//    {
+//        // Input validation
+//        std::cout << "Enter a number:\n";
+//        std::cin >> input2;
+//        if (input1 < 128 && input1 > -127)
+//            L2InputInvalid = false;
+//        else
+//            std::cout << "Only numbers between -127 and 128 are allowed!\nPlease try again... \n";
+//    }
+//    std::cout << input2 << " is " << LevelTwo(input2) << " in binary!";
 
-
-
-    int input2;
-    bool L2InputInvalid = true; // Input validation variable
-    std::cout << "LEVEL TWO\n";
-    while (L2InputInvalid)
-    {
-        // Input validation
-        std::cout << "Enter a number:\n";
-        std::cin >> input2;
-        if (input1 < 128 && input1 > -127)
-            L2InputInvalid = false;
-        else
-            std::cout << "Only numbers between -127 and 128 are allowed!\nPlease try again... \n";
-    }
-    std::cout << input2 << " is " << LevelTwo(input2) << " in binary!";
-
+    double input3;
+    std::cout << "Enter a number:\n";
+    std::cin >> input3;
+    LevelThree(input3);
     return 0;
 }
 
@@ -90,4 +92,29 @@ std::string LevelTwo(int input)
     }
 
     return binaryInput;
+}
+
+std::string LevelThree(double input)
+{
+    std::string inputStr = std::to_string(input);
+
+    int intInput = static_cast<int>(std::stof(inputStr));
+    std::string intInputAfterDecimalStr;
+
+    bool afterDecimal = false;
+    for (char eachChar : inputStr)
+    {
+        if (eachChar == '.')
+            afterDecimal = true;
+
+        if (afterDecimal)
+            if (eachChar != '.')
+                intInputAfterDecimalStr += eachChar;
+    }
+
+    // Declares returnable string
+    std::string binaryInput;
+
+
+    std::cout << intInputAfterDecimalStr;
 }
