@@ -92,7 +92,7 @@ void LevelTwoInput()
         // Input validation
         std::cout << "Enter a number between -127 and 128:\n";
         std::cin >> input2;
-        if (input2 <= 128 && input2 >= -127)
+        if (input2 <= 128 && input2 >= -127 && IsNumber(std::to_string(input2)))
             L2InputInvalid = false;
         else
             std::cout << "Only numbers between -127 and 128 are allowed!\nPlease try again... \n";
