@@ -6,6 +6,9 @@
 #include <iostream>
 #include <cmath>
 
+/////////////////////////////
+
+//Complexity Level One Code
 void ComplexityLevelOne()
 {
     std::cout << "Complexity Level One" << std::endl;
@@ -44,6 +47,9 @@ std::string LevelOne(int input)
     return binaryInput;
 }
 
+/////////////////////////////
+
+//Complexity Level Two Code
 void ComplexityLevelTwo()
 {
     std::cout << "Complexity Level Two" << std::endl;
@@ -91,6 +97,9 @@ std::string LevelTwo(int input)
     return binaryInput;
 }
 
+/////////////////////////////
+
+//Complexity Level Three Code
 void ComplexityLevelThree()
 {
     std::cout << "Complexity Level Three" << std::endl;
@@ -120,6 +129,8 @@ std::string LevelThree(double input)
 
     std::cout << intInputAfterDecimalStr;
 }
+
+/////////////////////////////
 
 int main() {
     std::cout << "Choose a complexity level for the program (1, 2 , 3):" << std::endl;
