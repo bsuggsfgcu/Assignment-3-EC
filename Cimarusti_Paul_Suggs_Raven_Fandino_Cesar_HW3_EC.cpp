@@ -8,6 +8,10 @@
 
 /////////////////////////////
 
+std::string LevelOne(int input);
+std::string LevelTwo(int input);
+std::string LevelThree(double input);
+
 //Complexity Level One Code
 void ComplexityLevelOne()
 {
