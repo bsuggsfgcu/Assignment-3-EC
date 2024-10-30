@@ -13,11 +13,38 @@ std::string LevelThree(double input);
 void ComplexityLevelOne()
 {
     std::cout << "Complexity Level One" << std::endl;
+    int input1;
+    bool L1InputInvalid = true; // Input validation variable
+    while (L1InputInvalid)
+    {
+        // Input validation
+        std::cout << "Enter a number:\n";
+        std::cin >> input1;
+        if (input1 < 255 && input1 > 0)
+           L1InputInvalid = false;
+        else
+            std::cout << "Only numbers between 0 and 255 are allowed!\nPlease try again... \n";
+    }
+    std::cout << input1 << " is " << LevelOne(input1) << " in binary!'\n";
 }
 
 void ComplexityLevelTwo()
 {
     std::cout << "Complexity Level Two" << std::endl;
+    int input2;
+    bool L2InputInvalid = true; // Input validation variable
+    while (L2InputInvalid)
+    {
+        // Input validation
+        std::cout << "Enter a number between -127 and 128:\n";
+        std::cin >> input2;
+        if (input2 < 128 && input2 > -127)
+            L2InputInvalid = false;
+        else
+            std::cout << "Only numbers between -127 and 128 are allowed!\nPlease try again... \n";
+    }
+    std::cout << input2 << " is " << LevelTwo(input2) << " in binary!";
+
 }
 
 void ComplexityLevelThree()
@@ -26,35 +53,9 @@ void ComplexityLevelThree()
 }
 
 int main() {
-//    int input1;
-//    bool L1InputInvalid = true; // Input validation variable
-//    std::cout << "LEVEL ONE\n";
-//    while (L1InputInvalid)
-//    {
-//        // Input validation
-//        std::cout << "Enter a number:\n";
-//        std::cin >> input1;
-//        if (input1 < 255 && input1 > 0)
-//           L1InputInvalid = false;
-//        else
-//            std::cout << "Only numbers between 0 and 255 are allowed!\nPlease try again... \n";
-//    }
-//    std::cout << input1 << " is " << LevelOne(input1) << " in binary!'\n";
+
 //
-//    int input2;
-//    bool L2InputInvalid = true; // Input validation variable
-//    std::cout << "LEVEL TWO\n";
-//    while (L2InputInvalid)
-//    {
-//        // Input validation
-//        std::cout << "Enter a number:\n";
-//        std::cin >> input2;
-//        if (input1 < 128 && input1 > -127)
-//            L2InputInvalid = false;
-//        else
-//            std::cout << "Only numbers between -127 and 128 are allowed!\nPlease try again... \n";
-//    }
-//    std::cout << input2 << " is " << LevelTwo(input2) << " in binary!";
+
   
   std::cout << "Choose a complexity level for the program (1, 2 , 3):" << std::endl;
     int complexity;
