@@ -8,6 +8,22 @@ std::string LevelOne(int input);
 std::string LevelTwo(int input);
 std::string LevelThree(double input);
 
+
+void ComplexityLevelOne()
+{
+    std::cout << "Complexity Level One" << std::endl;
+}
+
+void ComplexityLevelTwo()
+{
+    std::cout << "Complexity Level Two" << std::endl;
+}
+
+void ComplexityLevelThree()
+{
+    std::cout << "Complexity Level Three" << std::endl;
+}
+
 int main() {
 //    int input1;
 //    bool L1InputInvalid = true; // Input validation variable
@@ -38,11 +54,26 @@ int main() {
 //            std::cout << "Only numbers between -127 and 128 are allowed!\nPlease try again... \n";
 //    }
 //    std::cout << input2 << " is " << LevelTwo(input2) << " in binary!";
-
-    double input3;
-    std::cout << "Enter a number:\n";
-    std::cin >> input3;
-    LevelThree(input3);
+  
+  std::cout << "Choose a complexity level for the program (1, 2 , 3):" << std::endl;
+    int complexity;
+    std::cin >> complexity;
+    if(complexity == 1)
+    {
+        ComplexityLevelOne();
+    }
+    else if(complexity == 2)
+    {
+        ComplexityLevelTwo();
+    }
+    else if(complexity == 3)
+    {
+        ComplexityLevelThree();
+    }
+    else
+    {
+       std::cout << "Invalid input, ending program." << std::endl;
+    }
     return 0;
 }
 
